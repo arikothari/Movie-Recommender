@@ -24,6 +24,7 @@ yarn-error.log*
 
 # Ignore entire virtual environment directory
 backend/movie_recommender_env/
+movie_recommender_env/
 
 # Ignore specific file types if they appear elsewhere
 *.dylib
