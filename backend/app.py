@@ -2,6 +2,7 @@ from flask import Flask, request, jsonify
 import requests
 import pandas as pd
 from flask_cors import CORS
+import os
 
 API_KEY = '60021372306d6c2aa043973273e5b7ee'
 
@@ -81,5 +82,10 @@ def recommend():
         }
     })
 
-if __name__ == '__main__':
-    app.run(debug=True)
+# if __name__ == '__main__':
+#     app.run(debug=True)
+
+# import os
+
+if __name__ == "__main__":
+    app.run(host='0.0.0.0', port=int(os.environ.get('PORT', 5000)))
