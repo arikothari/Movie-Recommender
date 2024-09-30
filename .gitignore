@@ -21,3 +21,15 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+# Ignore entire virtual environment directory
+backend/movie_recommender_env/
+
+# Ignore specific file types if they appear elsewhere
+*.dylib
+*.so
+
+# Ignore specific large files
+backend/movie_recommender_env/lib/python3.12/site-packages/clang/native/libclang.dylib
+backend/movie_recommender_env/lib/python3.12/site-packages/tensorflow/compiler/mlir/stablehlo/stablehlo_extension.so
+backend/movie_recommender_env/lib/python3.12/site-packages/tensorflow/libtensorflow_cc.2.dylib
