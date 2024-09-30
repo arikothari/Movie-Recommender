@@ -36,3 +36,66 @@
     transform: rotate(360deg);
   }
 }
+
+/* App.css */
+
+.movie-selection {
+  margin: 20px 0;
+}
+
+.movies-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 20px;
+  justify-items: center;
+}
+
+.movie-item {
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: transform 0.2s, border 0.2s;
+  width: 150px;
+}
+
+.movie-item button {
+  background: none;
+  border: none;
+  outline: none;
+  padding: 0;
+  width: 100%;
+}
+
+.movie-item img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.movie-item p {
+  font-size: 14px;
+  margin-top: 10px;
+  text-align: center;
+}
+
+.movie-item.selected {
+  border: 2px solid green;
+  transform: scale(1.05);
+}
+
+.recommendation-button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.recommendation {
+  margin-top: 20px;
+}
+
+.recommendation img {
+  width: 300px;
+  margin-top: 10px;
+  border-radius: 10px;
+}
+
