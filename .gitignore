@@ -30,6 +30,6 @@ backend/movie_recommender_env/
 *.so
 
 # Ignore specific large files
-backend/movie_recommender_env/lib/python3.12/site-packages/clang/native/libclang.dylib
-backend/movie_recommender_env/lib/python3.12/site-packages/tensorflow/compiler/mlir/stablehlo/stablehlo_extension.so
-backend/movie_recommender_env/lib/python3.12/site-packages/tensorflow/libtensorflow_cc.2.dylib
+# backend/movie_recommender_env/lib/python3.12/site-packages/clang/native/libclang.dylib
+# backend/movie_recommender_env/lib/python3.12/site-packages/tensorflow/compiler/mlir/stablehlo/stablehlo_extension.so
+# backend/movie_recommender_env/lib/python3.12/site-packages/tensorflow/libtensorflow_cc.2.dylib
