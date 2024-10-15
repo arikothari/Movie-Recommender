@@ -49,7 +49,7 @@ function App() {
 
   return (
     <div className="App">
-      <h1>Movie Recommendation System</h1>
+      <h1 className="app-title">Movie Recommendation System</h1>
       <div className="movie-selection">
         <h2>Select Three Movies:</h2>
         <div className="movies-list">
@@ -57,34 +57,31 @@ function App() {
             <div key={`${movie.id}-${index}`} className="movie-item">
               <button
                 onClick={() => handleMovieSelect(movie.id)}
-                style={{ 
-                  backgroundColor: selectedMovies.includes(movie.id) ? 'green' : 'white',
-                  border: '1px solid black',
-                  margin: '10px',
-                  padding: '10px'
-                }}
+                className={`movie-button ${selectedMovies.includes(movie.id) ? 'selected' : ''}`}
               >
                 <img
                   src={`https://image.tmdb.org/t/p/w200${movie.poster_path}`}
                   alt={movie.title}
-                  style={{ display: 'block', margin: 'auto' }}
+                  className="movie-poster"
                 />
-                <p style={{ textAlign: 'center' }}>{movie.title}</p>
+                <p className="movie-title">{movie.title}</p>
               </button>
             </div>
           ))}
         </div>
       </div>
-      <button onClick={getRecommendation} style={{ marginTop: '20px' }}>Get Recommendation</button>
+      <button className="recommendation-button" onClick={getRecommendation}>
+        Get Recommendation
+      </button>
       {recommendation && (
-        <div className="recommendation" style={{ marginTop: '20px' }}>
+        <div className="recommendation">
           <h2>Recommended Movie:</h2>
-          <p>Title: {recommendation.title}</p>
+          <p className="recommendation-title">{recommendation.title}</p>
           <p>{recommendation.overview}</p>
           <img
             src={`https://image.tmdb.org/t/p/w500${recommendation.poster_path}`}
             alt={recommendation.title}
-            style={{ width: '300px', marginTop: '10px' }}
+            className="recommended-poster"
           />
         </div>
       )}
