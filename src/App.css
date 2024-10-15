@@ -1,101 +1,89 @@
+/* App.css */
 .App {
   text-align: center;
+  font-family: 'Arial', sans-serif;
+  background-color: #f0f0f0;
+  padding: 20px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.app-title {
+  color: #333;
+  margin-bottom: 20px;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-/* App.css */
 
 .movie-selection {
   margin: 20px 0;
 }
 
 .movies-list {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  gap: 20px;
-  justify-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .movie-item {
+  margin: 10px;
+}
+
+.movie-button {
+  background-color: #ffffff;
+  border: 1px solid #ccc;
+  border-radius: 5px;
   cursor: pointer;
-  border: 2px solid transparent;
-  transition: transform 0.2s, border 0.2s;
   width: 150px;
+  transition: background-color 0.3s ease;
 }
 
-.movie-item button {
-  background: none;
-  border: none;
-  outline: none;
-  padding: 0;
+.movie-button.selected {
+  background-color: #4CAF50; /* Green background for selected movies */
+  color: white;
+}
+
+.movie-button:hover {
+  background-color: #e0e0e0;
+}
+
+.movie-poster {
   width: 100%;
+  border-radius: 5px;
 }
 
-.movie-item img {
-  width: 100%;
-  height: auto;
-  border-radius: 10px;
-}
-
-.movie-item p {
+.movie-title {
+  margin-top: 5px;
   font-size: 14px;
-  margin-top: 10px;
-  text-align: center;
-}
-
-.movie-item.selected {
-  border: 2px solid green;
-  transform: scale(1.05);
+  color: #555;
 }
 
 .recommendation-button {
-  margin-top: 20px;
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  border-radius: 5px;
   padding: 10px 20px;
-  font-size: 16px;
   cursor: pointer;
+  margin-top: 20px;
+  transition: background-color 0.3s ease;
+}
+
+.recommendation-button:hover {
+  background-color: #0056b3;
 }
 
 .recommendation {
   margin-top: 20px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #fff;
 }
 
-.recommendation img {
+.recommendation-title {
+  font-size: 20px;
+  color: #333;
+}
+
+.recommended-poster {
   width: 300px;
+  border-radius: 5px;
   margin-top: 10px;
-  border-radius: 10px;
 }
-

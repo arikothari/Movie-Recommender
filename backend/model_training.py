@@ -5,21 +5,20 @@ from tensorflow.keras.layers import Dense
 
 # Sample user-movie interaction data
 user_movie_data = {
-    'user_id': [1, 2, 3, 1, 2, 3],
     'movie_id': [101, 102, 103, 102, 101, 104],
     'rating': [5, 4, 3, 5, 4, 3]
 }
 
 # Load and prepare the data
 df = pd.DataFrame(user_movie_data)
-X = df[['user_id', 'movie_id']]
+X = df[['movie_id']]
 y = df['rating']
 
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
 # Build a simple model
 model = Sequential()
-model.add(Dense(128, input_dim=2, activation='relu'))
+model.add(Dense(128, input_dim=1, activation='relu'))
 model.add(Dense(64, activation='relu'))
 model.add(Dense(1))
 
@@ -27,4 +26,4 @@ model.compile(optimizer='adam', loss='mean_squared_error')
 model.fit(X_train, y_train, epochs=10, batch_size=8, validation_data=(X_test, y_test))
 
 # Save the model
-model.save('../model/movie_recommender_model.h5')
+model.save('../model/movie_recommender1_model.h5')
